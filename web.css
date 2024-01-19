@@ -150,8 +150,8 @@ body {
   height: 100%; /* Adjust the size as needed */
   object-fit: cover;
   position: absolute;
-  top: 2;
-  right: 0; /* Adjust the position as needed */
+  top: 0;
+  right: 3; /* Adjust the position as needed */
   z-index: -1;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   animation: splitImage 4s infinite alternate ease-in-out;
