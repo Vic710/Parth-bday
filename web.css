@@ -1,9 +1,14 @@
 body {
+  margin: 0;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
   height: 100vh;
   background-color: #fff;
+}
+
+.birthdayCardContainer {
+  margin-right: 20px; /* Adjust as needed */
 }
 
 .birthdayCard {
