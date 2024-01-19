@@ -145,3 +145,27 @@ body {
     outline-color: #333;
     outline-style: dotted;
   }
+.split-image {
+  width: 30%; /* Adjust the size as needed */
+  height: 100%; /* Adjust the size as needed */
+  object-fit: cover;
+  position: absolute;
+  top: 2;
+  right: 0; /* Adjust the position as needed */
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  animation: splitImage 4s infinite alternate ease-in-out;
+}
+
+@keyframes splitImage {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    transform: translateX(20px);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
