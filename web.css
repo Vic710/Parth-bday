@@ -1,178 +1,147 @@
 body {
-  margin: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100vh;
-  background-color: #fff;
-}
-
-.birthdayCardContainer {
-  margin-right: 2000px; /* Adjust as needed */
-}
-
-.birthdayCard {
-  position: relative;
-  width: 350px;
-  height: 450px;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  transform: perspective(2500px);
-  transition: 1s;
-}
-
-.birthdayCard:hover {
-  transform: perspective(2500px) rotate(5deg);
-  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
-    0 10px 100px rgba(0, 0, 0, 0.5);
-}
-
-.birthdayCard:hover .cardFront {
-  transform: rotateY(-160deg);
-}
-
-.birthdayCard:hover .happy {
-  visibility: hidden;
-}
-
-.cardFront {
-  position: relative;
-  background-color: #c842f5;
-  width: 350px;
-  height: 450px;
-  overflow: hidden;
-  transform-origin: left;
-  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
-    30px 0 50px rgba(0, 0, 0, 0.4);
-  transition: 0.6s;
-}
-
-.happy {
-  font-family: cursive;
-  text-align: center;
-  margin: 30px;
-  background-image: linear-gradient(120deg, #ffd856 0%, #f98c6e 100%);
-  transition: 0.1s;
-}
-
-p{
-  color: black;
-  font-family: cursive;
-  text-align: center;
-  text-size-adjust: 50;
-}
-.cake {
-  width: 100%;
-  position: absolute;
-  bottom: 30px;
-}
-.top-layer,
-.middle-layer,
-.bottom-layer {
-  height: 80px;
-  width: 240px;
-  background-repeat: repeat;
-  background-size: 60px 100px;
-  background-position: 28px 0;
-  background-image: linear-gradient(
-      transparent 50px,
-      #fedbab 50px,
-      #fedbab 60px,
-      transparent 60px
-    ),
-    radial-gradient(circle at 30px 5px, #994c10 30px, #fcbf29 31px);
-  border-radius: 10px 10px 0 0;
-  position: relative;
-  margin: auto;
-}
-.middle-layer {
-  transform: scale(0.85);
-  top: 6px;
-}
-.top-layer {
-  transform: scale(0.7);
-  top: 26px;
-}
-.candle {
-  height: 45px;
-  width: 15px;
-  background: repeating-linear-gradient(
-    45deg,
-    #fd3018 0,
-    #fd3018 5px,
-    #ffa89e 5px,
-    #ffa89e 10px
-  );
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  bottom: 202px;
-}
-.candle:before {
-  content: "";
-  position: absolute;
-  height: 16px;
-  width: 16px;
-  background-color: #ffa500;
-  border-radius: 0 50% 50% 50%;
-  bottom: 48px;
-  transform: rotate(45deg);
-  left: -1px;
-}
-
-.cardInside {
-  position: absolute;
-  background-color: #fff;
-  width: 350px;
-  height: 450px;
-  z-index: -1;
-  left: 0;
-  top: 0;
-  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
-  background-image: url("bgimg.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.name {
-  position: absolute;
-  left: 150px;
-  top: 200px;
-  color: #333;
-}
-
-.back {
-  font-family: cursive;
-  color: #333;
-  text-align: center;
-  margin: 30px;
-  outline-color: #333;
-  outline-style: dotted;
-}
-
-.split-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-@keyframes splitImage {
-  0% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff;
   }
-  50% {
-    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  
+  .birthdayCard {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
   }
-  100% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  
+  .birthdayCard:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+      0 10px 100px rgba(0, 0, 0, 0.5);
   }
-}
-
-.split-image:hover {
-  animation: splitImage 2s infinite alternate;
-}
+  
+  .birthdayCard:hover .cardFront {
+    transform: rotateY(-160deg);
+  }
+  
+  .birthdayCard:hover .happy {
+    visibility: hidden;
+  }
+  
+  .cardFront {
+    position: relative;
+    background-color: #c842f5;
+    width: 350px;
+    height: 450px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+      30px 0 50px rgba(0, 0, 0, 0.4);
+    transition: 0.6s;
+  }
+  
+  .happy {
+    font-family: cursive;
+    text-align: center;
+    margin: 30px;
+    background-image: linear-gradient(120deg, #ffd856 0%, #f98c6e 100%);
+    transition: 0.1s;
+  }
+  
+  p{
+    color: black;
+    font-family: cursive;
+    text-align: center;
+    text-size-adjust: 50;
+  }
+  .cake {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+  }
+  .top-layer,
+  .middle-layer,
+  .bottom-layer {
+    height: 80px;
+    width: 240px;
+    background-repeat: repeat;
+    background-size: 60px 100px;
+    background-position: 28px 0;
+    background-image: linear-gradient(
+        transparent 50px,
+        #fedbab 50px,
+        #fedbab 60px,
+        transparent 60px
+      ),
+      radial-gradient(circle at 30px 5px, #994c10 30px, #fcbf29 31px);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    margin: auto;
+  }
+  .middle-layer {
+    transform: scale(0.85);
+    top: 6px;
+  }
+  .top-layer {
+    transform: scale(0.7);
+    top: 26px;
+  }
+  .candle {
+    height: 45px;
+    width: 15px;
+    background: repeating-linear-gradient(
+      45deg,
+      #fd3018 0,
+      #fd3018 5px,
+      #ffa89e 5px,
+      #ffa89e 10px
+    );
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 202px;
+  }
+  .candle:before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: #ffa500;
+    border-radius: 0 50% 50% 50%;
+    bottom: 48px;
+    transform: rotate(45deg);
+    left: -1px;
+  }
+  
+  .cardInside {
+    position: absolute;
+    background-color: #fff;
+    width: 350px;
+    height: 450px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+    background-image: url("bgimg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .name {
+    position: absolute;
+    left: 150px;
+    top: 200px;
+    color: #333;
+  }
+  
+  .back {
+    font-family: cursive;
+    color: #333;
+    text-align: center;
+    margin: 30px;
+    outline-color: #333;
+    outline-style: dotted;
+  }
